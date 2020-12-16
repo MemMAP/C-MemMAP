@@ -6,10 +6,16 @@ This repo contains code accompaning the manuscript, "C-MemMAP: Clustering-driven
 The trace uses the PARSEC benchmark(https://parsec.cs.princeton.edu/), generated using Pin tool, see example *Memory Reference Trace* (https://software.intel.com/sites/landingpage/pintool/docs/97503/Pin/html/)
 
 ## Specialized Model
+### Dependencies
+* NVIDIA GPU
+* TensorFlow v1.0+
+* keras v1.0+
 
+### Preprocessing
+Run `python3 ./Preprocessing.py 200000`, where the argument is the length of deltas sequences.
 
+Preprocessing.py tokenize and binarize the sequence for doubly-compress LSTM training and testing.
 ## Delegated Model
-### Running
-```python3 ./Delegated_Model_Clustering.py```
+Run the DM clustering use script `python3 ./Delegated_Model_Clustering.py`
 
 The script uses the DCLSTM models in folder *Specialized_rerun_model*. The model weights of the DCLSTM models are concatenated, dimension reduced using PCA, and clustered using k-means. 
