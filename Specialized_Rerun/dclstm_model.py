@@ -17,7 +17,7 @@ from keras.layers import LSTM
 from keras.layers import CuDNNLSTM #use env:ef1 to train with GPU
 from keras.callbacks import EarlyStopping
 
-class my_model:
+class dclstm_model:
     def __init__(self, vocab_size, batch_size, embedding_dim, i_dim, o_dim):
         self.i_dim = i_dim
         self.o_dim = o_dim
@@ -49,7 +49,7 @@ class my_model:
     def predict(self,X):
         return self.model.predict(np.asarray(X))
     
-class my_model_stateful:
+class dclstm_model_stateful:
     def __init__(self, vocab_size, batch_size,embedding_dim, i_dim, o_dim):
         self.i_dim = i_dim
         self.o_dim = o_dim

@@ -9,12 +9,17 @@ The trace uses the PARSEC benchmark(https://parsec.cs.princeton.edu/), generated
 ### Dependencies
 * NVIDIA GPU
 * TensorFlow v1.0+
-* keras v1.0+
+* Keras v1.0+
 
 ### Preprocessing
+`cd ./Specialized_Rerun`
 Run `python3 ./Preprocessing.py 200000`, where the argument is the length of deltas sequences.
 
 Preprocessing.py tokenize and binarize the sequence for doubly-compress LSTM training and testing.
+
+### Speclialized Model Training and Testing
+`python3 Train2Test1.py 200000 20`, where argv[1] is the length of sequences and argv[2] is the training epochs.
+
 ## Delegated Model
 Run the DM clustering use script `python3 ./Delegated_Model_Clustering.py`
 
