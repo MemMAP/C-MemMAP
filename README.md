@@ -11,9 +11,11 @@ Each application is rerun for three times and acquires inconsistent configuratio
 
 ## Specialized Model - Rerun
 ### Dependencies
+* python: 3.x
 * NVIDIA GPU
 * TensorFlow v1.0+
 * Keras v1.0+
+* Pytorch: 0.4+
 
 ### Preprocessing
 First, `cd ./Specialized_Rerun`
@@ -44,6 +46,9 @@ Run `python3 ./prep_concac.py 200000`, where the argument is the length of delta
 ```python3 Train_all_Test_each.py 200000 20```, where argv[1] is the length of sequences and argv[2] is the training epochs.
 
 ## Meta-DCLSTM
+### Dependencis
+*
+*
 `cd ./Meta-DCLSTM`
 ### Preprocessing
 
