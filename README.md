@@ -12,10 +12,10 @@ Each application is rerun for three times and acquires inconsistent configuratio
 ## Specialized Model - Rerun
 ### Dependencies
 * python: 3.x
-* NVIDIA GPU
 * TensorFlow v1.0+
 * Keras v1.0+
 * Pytorch: 0.4+
+* NVIDIA GPU
 
 ### Preprocessing
 First, `cd ./Specialized_Rerun`
@@ -35,6 +35,7 @@ Run the DM clustering use script `python3 ./Delegated_Model_Clustering.py`
 The script uses the DCLSTM models in folder *Specialized_rerun_model*. The model weights of the DCLSTM models are concatenated, dimension reduced using PCA, and clustered using k-means. 
 
 ## Cacatenated Model - Rerun
+
 `cd ./Concatenated_Rerun`
 
 ### Preprocessing
@@ -46,9 +47,7 @@ Run `python3 ./prep_concac.py 200000`, where the argument is the length of delta
 ```python3 Train_all_Test_each.py 200000 20```, where argv[1] is the length of sequences and argv[2] is the training epochs.
 
 ## Meta-DCLSTM
-### Dependencis
-*
-*
+
 `cd ./Meta-DCLSTM`
 ### Preprocessing
 
