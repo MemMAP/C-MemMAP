@@ -7,7 +7,7 @@ The trace uses the PARSEC benchmark(https://parsec.cs.princeton.edu/), generated
 
 Each application is rerun for three times for inconsistent configuration traces.
 
-## Specialized-Rerun
+## Specialized Model - Rerun
 ### Dependencies
 * NVIDIA GPU
 * TensorFlow v1.0+
@@ -24,8 +24,21 @@ Preprocessing.py tokenize and binarize the sequence for doubly-compress LSTM tra
 `python3 Train2Test1.py 200000 20`, where argv[1] is the length of sequences and argv[2] is the training epochs.
 
 ## Delegated Model Clustering
+`cd ./Delegated_Model_Clustering`
+
 Run the DM clustering use script `python3 ./Delegated_Model_Clustering.py`
 
 The script uses the DCLSTM models in folder *Specialized_rerun_model*. The model weights of the DCLSTM models are concatenated, dimension reduced using PCA, and clustered using k-means. 
 
-### Meta-DCLSTM
+## Cacatenated Model - Rerun
+`cd ./Concatenated_Rerun`
+
+### Preprocessing
+
+Then run `python3 ./prep_concac.py 200000`, where the argument is the length of deltas sequences.
+
+### Traing and Testing
+
+```python3 Train_all_Test_each.py 200000 20```, where argv[1] is the length of sequences and argv[2] is the training epochs.
+
+## Meta-DCLSTM
