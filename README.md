@@ -5,7 +5,9 @@ This repo contains code accompaning the manuscript, "C-MemMAP: Clustering-driven
 ## Dataset 
 The trace uses the PARSEC benchmark(https://parsec.cs.princeton.edu/), generated using Pin tool, see example *Memory Reference Trace* (https://software.intel.com/sites/landingpage/pintool/docs/97503/Pin/html/)
 
-Each application is rerun for three times for inconsistent configuration traces.
+Each application is rerun for three times and acquires inconsistent configuration traces: T1, T2, and T3. 
+
+`data_dt` folder provides the deferentiated deltas from the raw traces T1, T2, and T3.
 
 ## Specialized Model - Rerun
 ### Dependencies
@@ -18,7 +20,7 @@ First, `cd ./Specialized_Rerun`
 
 Then run `python3 ./Preprocessing.py 200000`, where the argument is the length of deltas sequences.
 
-Preprocessing.py tokenize and binarize the sequence for doubly-compress LSTM training and testing. For each application, T1 and T2 traces are concatenated as training set and T3 is the testing set.
+Preprocessing.py tokenize and binarize the sequence for doubly-compress LSTM training and testing. For each application, T1 and T2 delta traces are concatenated as training set and T3 delta trace is the testing set.
 
 ### Speclialized Model Training and Testing
 `python3 Train2Test1.py 200000 20`, where argv[1] is the length of sequences and argv[2] is the training epochs.
