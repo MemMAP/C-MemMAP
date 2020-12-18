@@ -44,3 +44,16 @@ Run `python3 ./prep_concac.py 200000`, where the argument is the length of delta
 ```python3 Train_all_Test_each.py 200000 20```, where argv[1] is the length of sequences and argv[2] is the training epochs.
 
 ## Meta-DCLSTM
+`cd ./Meta-DCLSTM`
+### Preprocessing
+
+Run `python3 ./prep_meta.py 200000`, where the argument is the length of deltas sequences.
+
+### Training and Testing
+
+```python3 Train_all_Test_each.py 200000```, where argv is the length of sequences.
+
+## C-Meta-DCLSTM
+
+Use the clustering result from *Delegated Model Clustering*, train one Meta-DCLSTM model for each cluster of applications.
+
