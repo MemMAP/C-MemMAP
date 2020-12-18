@@ -35,7 +35,7 @@ The script uses the DCLSTM models in folder *Specialized_rerun_model*. The model
 
 ### Preprocessing
 
-Then run `python3 ./prep_concac.py 200000`, where the argument is the length of deltas sequences.
+Run `python3 ./prep_concac.py 200000`, where the argument is the length of deltas sequences.
 
 ### Training and Testing
 
