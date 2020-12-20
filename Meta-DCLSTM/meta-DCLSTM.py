@@ -10,8 +10,8 @@ import glob
 import  numpy as np
 import sys
 
-PROJECT_ROOT_DIRECTORY = "/home/pengmiao/Project/PAKDD-2/my_meta/MAML/"
-NP_TRACE_DIRECTORY ="/home/pengmiao/Project/PAKDD-2/my_meta/MAML/np_file/"
+PROJECT_ROOT_DIRECTORY = "./"
+NP_TRACE_DIRECTORY ="./np_file/"
 sys.path.append(PROJECT_ROOT_DIRECTORY)
 
 from utils import *
