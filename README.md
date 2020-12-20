@@ -55,7 +55,7 @@ Run `python3 ./prep_meta.py 200000`, where the argument is the length of deltas 
 
 ### Training and Testing
 
-```python3 Train_all_Test_each.py 200000```, where the argument is the length of sequences.
+```python3 meta-DCLSTM.py 200000```, where the argument is the length of sequences.
 
 ## C-Meta-DCLSTM
 
